@@ -91,7 +91,7 @@ h2 {
 .menu-card {
 
     display: inline-block;
-    width: 400px; /* fixed width for all menu cards */
+    width: 350px; /* fixed width for all menu cards */
     border: 1px solid #ccc;
     margin: 10px;
     padding: 10px;
