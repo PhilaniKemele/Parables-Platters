@@ -21,9 +21,7 @@
     </header>
 
     <div id="menu" title="click to order">
-
         <h2>Menu</h2>
-
         <div class="menu-card" data-menu-item="Pap, Steak and Wors (w/ Sambles and Coleslaw)">
             <div class="image-container">
                 <img src="phuthu_beefcurry_wors.jpg" alt="Menu Item 1">
@@ -31,6 +29,36 @@
             <p class="description">Phuthu, Beef Curry, Wors & Sambles</p>
             <p class="price">R50</p>
         </div>
+        <!-- Add more menu items as needed -->
+    </div>
+
+    <!-- Hidden form overlay -->
+    <div class="form-overlay">
+        <div class="form-container">
+            <span class="close-btn">&times;</span>
+            <form id="orderForm" action="https://formspree.io/f/xpzgnpzz" method="POST">
+                <!-- Form fields for user details -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="Name" required>
+
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="Address" required></textarea>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="Phone" required>
+
+                <label for="instructions">Any further Delivery Instructions?</label>
+                <textarea id="instructions" name="Instructions"></textarea>
+
+                <!-- Hidden fields for selected item details -->
+                <input type="hidden" id="selectedItem" name="Selected_Item">
+                <input type="hidden" id="itemPrice" name="Item_Price">
+
+                <button id="submitBtn" type="button">Submit Order</button>
+
+            </form>
+        </div>
+    </div>
     
     <footer>
         <p>&copy; 2023 Parables & Platters</p>
